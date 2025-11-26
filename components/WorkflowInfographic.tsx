@@ -35,7 +35,7 @@ export default function WorkflowInfographic() {
                 }
             );
 
-            gsap.utils.toArray('.step-item').forEach((item: any, i) => {
+            (gsap.utils.toArray('.step-item') as Element[]).forEach((item) => {
                 gsap.fromTo(item,
                     { opacity: 0, x: -50 },
                     {

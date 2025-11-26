@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,8 +23,15 @@ export default function NavBar() {
                 }`}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold text-tv-offwhite">
-                    Tech<span className="text-tv-teal">Vedyaa</span>
+                <Link href="/" className="flex items-center">
+                    <Image
+                        src="/images/techvedyaa_logo.png"
+                        alt="TechVedyaa"
+                        width={200}
+                        height={60}
+                        priority
+                        className="h-12 w-auto"
+                    />
                 </Link>
 
                 {/* Desktop Menu */}
