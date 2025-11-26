@@ -39,7 +39,7 @@ export default function ServicesPage() {
                     />
                     <ServiceCard
                         title="Custom Development"
-                        description="Full-stack web and app development tailored to your brand's unique needs."
+                        description="Full-stack web and app development tailored to your brand&apos;s unique needs."
                         link="/contact"
                     />
                     <ServiceCard
@@ -57,7 +57,7 @@ export default function ServicesPage() {
 
             <CTASection
                 title="Need a Custom Solution?"
-                subtitle="Let's discuss your specific requirements and build a roadmap for success."
+                subtitle="Let&apos;s discuss your specific requirements and build a roadmap for success."
                 buttonText="Talk to an Expert"
                 link="/contact"
             />

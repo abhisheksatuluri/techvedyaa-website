@@ -1,4 +1,4 @@
-import HeroImage from '@/components/HeroImage';
+
 import Image from 'next/image';
 
 export default function InsightsPage() {

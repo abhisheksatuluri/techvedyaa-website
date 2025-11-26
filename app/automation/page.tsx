@@ -7,7 +7,6 @@ export default function AutomationPage() {
         <div className="flex flex-col gap-20 pb-20">
             <HeroVideo
                 mp4="/videos/video_automation_hero_n8n.mp4"
-                webm="/videos/video_automation_hero_n8n.webm"
                 poster="/images/poster_automation_hero.webp"
             />
 
@@ -50,7 +49,7 @@ export default function AutomationPage() {
 
             <CTASection
                 title="Stop Wasting Time on Manual Tasks"
-                subtitle="Let's build a custom automation solution for your business."
+                subtitle="Let&apos;s build a custom automation solution for your business."
                 buttonText="Get Started"
                 link="/contact"
             />

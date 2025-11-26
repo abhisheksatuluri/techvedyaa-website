@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 interface HeroVideoProps {
     mp4: string;
@@ -10,7 +11,32 @@ interface HeroVideoProps {
 
 export default function HeroVideo({ mp4, webm, poster }: HeroVideoProps) {
     const [isPlaying, setIsPlaying] = useState(true);
+    const [shouldPlay, setShouldPlay] = useState(true);
     const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        // Check for reduced motion preference
+        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (mediaQuery.matches) {
+            setShouldPlay(false);
+            setIsPlaying(false);
+        }
+
+        const handleChange = () => {
+            if (mediaQuery.matches) {
+                setShouldPlay(false);
+                setIsPlaying(false);
+                if (videoRef.current) videoRef.current.pause();
+            } else {
+                setShouldPlay(true);
+                setIsPlaying(true);
+                if (videoRef.current) videoRef.current.play();
+            }
+        };
+
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -27,17 +53,20 @@ export default function HeroVideo({ mp4, webm, poster }: HeroVideoProps) {
         <div className="relative w-full h-[80vh] overflow-hidden bg-black">
             <video
                 ref={videoRef}
-                autoPlay
+                autoPlay={shouldPlay}
                 muted
                 loop
                 playsInline
                 poster={poster}
                 className="absolute inset-0 w-full h-full object-cover"
+                crossOrigin="anonymous"
             >
-                <source src={webm} type="video/webm" />
+                {webm && <source src={webm} type="video/webm" />}
                 <source src={mp4} type="video/mp4" />
                 {/* Fallback image if video fails or not supported */}
-                <img src={poster} alt="Hero Background" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 -z-10">
+                    <Image src={poster} alt="Hero Background" fill className="object-cover" />
+                </div>
             </video>
 
             <div className="absolute inset-0 bg-black/40" />

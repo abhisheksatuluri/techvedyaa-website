@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {
                         Success <span className="text-tv-teal">Stories</span>
                     </h1>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        See how we've helped businesses across industries achieve their goals through automation and AI.
+                        See how we&apos;ve helped businesses across industries achieve their goals through automation and AI.
                     </p>
                 </div>
 
@@ -57,7 +57,7 @@ export default function CaseStudiesPage() {
 
             <CTASection
                 title="Be Our Next Success Story"
-                subtitle="Let's achieve similar results for your business."
+                subtitle="Let&apos;s achieve similar results for your business."
                 buttonText="Start Now"
                 link="/contact"
             />

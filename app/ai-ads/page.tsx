@@ -1,14 +1,13 @@
-import HeroImage from '@/components/HeroImage';
+import HeroVideo from '@/components/HeroVideo';
 import VideoGallery from '@/components/VideoGallery';
 import CTASection from '@/components/CTASection';
 
 export default function AIAdsPage() {
     return (
         <div className="flex flex-col gap-20 pb-20">
-            <HeroImage
-                src="/images/hero_ai_ads_cinematic.png"
-                alt="AI Video Production"
-                priority={true}
+            <HeroVideo
+                mp4="/videos/video_ai_ads_hero.mp4"
+                poster="/images/poster_ai_ads_hero.webp"
             />
 
             <section className="container mx-auto px-6">

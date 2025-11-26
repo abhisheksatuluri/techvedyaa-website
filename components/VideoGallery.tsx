@@ -9,13 +9,13 @@ const videos = [
         id: 1,
         title: "Automation Workflow",
         thumbnail: "/images/automation_cinematic.png",
-        videoSrc: "/videos/source_n8n_workflow.mp4"
+        videoSrc: "/videos/video_automation_hero_n8n.mp4"
     },
     {
         id: 2,
         title: "AI Video Ads",
         thumbnail: "/images/hero_ai_ads_cinematic.png",
-        videoSrc: "/videos/video_ai_ads_hero.mp4" // Optional video if available
+        videoSrc: "/videos/video_ai_ads_hero.mp4"
     },
     // Add more placeholders if needed
 ];
@@ -73,6 +73,7 @@ export default function VideoGallery() {
                                 controls
                                 autoPlay
                                 className="w-full h-full"
+                                crossOrigin="anonymous"
                             />
                         </div>
                     </motion.div>

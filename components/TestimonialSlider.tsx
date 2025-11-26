@@ -44,7 +44,7 @@ export default function TestimonialSlider() {
                         className="absolute inset-0 flex flex-col items-center justify-center text-center"
                     >
                         <p className="text-2xl md:text-3xl text-tv-offwhite font-light italic mb-6">
-                            "{testimonials[current].quote}"
+                            &quot;{testimonials[current].quote}&quot;
                         </p>
                         <div>
                             <p className="text-tv-teal font-bold">{testimonials[current].author}</p>
