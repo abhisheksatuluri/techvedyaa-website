@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
+        <script dangerouslySetInnerHTML={{ __html: `console.log('Deployment Version: v2.0 - Cache Busting Active');` }} />
         <NavBar />
         <main className="min-h-screen">{children}</main>
         <Footer />

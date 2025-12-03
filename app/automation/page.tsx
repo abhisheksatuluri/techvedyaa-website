@@ -37,7 +37,7 @@ export default function AutomationPage() {
                     </div>
                     <div className="relative h-[400px] bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
                         <img
-                            src="/generated/automation/automation-diagram-1600x900.png"
+                            src="/generated/automation/automation-diagram-1600x900.png?v=2"
                             alt="Automation Architecture Diagram"
                             className="w-full h-full object-cover"
                         />
