@@ -36,10 +36,12 @@ export default function AutomationPage() {
                         </ul>
                     </div>
                     <div className="relative h-[400px] bg-white/5 rounded-2xl border border-white/10 overflow-hidden">
-                        {/* Placeholder for a diagram or image */}
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-600">
-                            [Automation Architecture Diagram]
-                        </div>
+                        <img
+                            src="/generated/automation/automation-diagram-1600x900.png"
+                            alt="Automation Architecture Diagram"
+                            className="w-full h-full object-cover"
+                        />
+                        {/* recommended overlay: rgba(0,0,0,0.45) */}
                     </div>
                 </div>
 
