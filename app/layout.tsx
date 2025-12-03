@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "TechVedyaa | Intelligent Automation & AI Marketing",
   description: "Empowering businesses with intelligent automation, AI-driven marketing solutions, and seamless digital transformation.",
   icons: {
-    icon: '/favicon-new.ico',
+    icon: '/favicon.ico?v=3',
   },
 };
 
