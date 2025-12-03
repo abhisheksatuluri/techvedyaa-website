@@ -23,9 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={outfit.className}>
         <NavBar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
