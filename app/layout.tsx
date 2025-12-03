@@ -8,7 +8,15 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TechVedyaa | Intelligent Automation & AI Marketing",
-  description: "Empowering businesses with intelligent automation, AI-driven marketing solutions, and seamless digital transformation.",
+  description:
+    "Empowering businesses with intelligent automation, AI-driven marketing solutions, and seamless digital transformation.",
+  // Tell Next.js to use the static favicon in /public
+  icons: {
+    // using a query string forces browsers to fetch a fresh copy after deploy
+    icon: "/favicon.ico?v=2",
+    // optional: apple touch and a png fallback
+    apple: "/apple-touch-icon.png?v=2",
+  },
 };
 
 export default function RootLayout({
@@ -20,9 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={outfit.className}>
         <NavBar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
